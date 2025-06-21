@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/style.css" rel="stylesheet">
+</head>
+
+<body class="w-screen h-screen">
+  <div class="w-full h-screen flex justify-center items-center bg-black bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1694637449947-cfe5552518c2?w=800&auto=format&fit=crop&q=90');">
+    <div class="m-3">
+      <div class="bg-black/20 backdrop-blur-sm border border-white/50 rounded-lg shadow-[inset_0_1px_0px_rgba(255,255,255,0.75),0_0_9px_rgba(0,0,0,0.2),0_3px_8px_rgba(0,0,0,0.15)] p-6 text-white relative before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-br before:from-white/60 before:via-transparent before:to-transparent before:opacity-70 before:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:bg-gradient-to-tl after:from-white/30 after:via-transparent after:to-transparent after:opacity-50 after:pointer-events-none">
+        <h1 class="font-extrabold text-center my-4 text-3xl">รางวัลล็อตเตอรี่</h1>
+        <h2 class="text-center text-2xl">ผลรางวัลล็อตเตอรี่</h2>
+        <div class="flex justify-center">
+          <button id="btn_random_reward"
+            class="my-4 inline-flex items-center justify-center border align-middle select-none font-sans text-center px-4 py-2 text-white text-sm font-medium rounded-lg bg-white/2.5  border-white/50 backdrop-blur-sm shadow-[inset_0_1px_0px_rgba(255,255,255,0.75),0_0_9px_rgba(0,0,0,0.2),0_3px_8px_rgba(0,0,0,0.15)] hover:bg-white/30 transition-all duration-300 before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-br before:from-white/60 before:via-transparent before:to-transparent before:opacity-70 before:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:bg-gradient-to-tl after:from-white/30 after:via-transparent after:to-transparent after:opacity-50 after:pointer-events-none  antialiased">ดำเนินการสุ่มรางวัล</button>
+        </div>
+        <table class="w-full rounded-2xl text-lg">
+          <tr class="border text-center">
+            <td class="border font-bold">รางวัลที่ 1</td>
+            <td id="reward_One" colspan="3">000</td>
+          </tr>
+          <tr class="border text-center">
+            <td class="border font-bold">รางวัลเลขข้างเคียงรางวัลที่ 1</td>
+            <td id="side_reward_One_1" class="border p-2 md:p-0">000</td>
+            <td id="side_reward_One_2" colspan="2">000</td>
+          </tr>
+          <tr class="border text-center">
+            <td class="border font-bold">รางวัลที่ 2</td>
+            <td id="reward_Two_1" class="border p-2 md:p-0">000</td>
+            <td id="reward_Two_2" class="border p-2 md:p-0">000</td>
+            <td id="reward_Two_3" class="border p-2 md:p-0">000</td>
+          </tr>
+          <tr class="border text-center">
+            <td class="border font-bold">รางวัลเลขท้าย 2 ตัว</td>
+            <td id="last_reward" colspan="3">00</td>
+          </tr>
+        </table>
+      </div>
+      <div
+        class="my-5 bg-black/20 backdrop-blur-sm border border-white/50 rounded-lg shadow-[inset_0_1px_0px_rgba(255,255,255,0.75),0_0_9px_rgba(0,0,0,0.2),0_3px_8px_rgba(0,0,0,0.15)] p-6 text-white relative before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-br before:from-white/60 before:via-transparent before:to-transparent before:opacity-70 before:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:bg-gradient-to-tl after:from-white/30 after:via-transparent after:to-transparent after:opacity-50 after:pointer-events-none">
+        <h1 class="text-lg">ตรวจสอบรางวัลล็อตเตอรี่</h1>
+        <div class=" items-center my-4 md:flex-col text-center ">
+          <span class="text-2xl">เลขล็อกเตอรี่</span>
+          <input id="input_reward" type="number" placeholder="กรอกเลขล็อกเตอรี่"
+            class="mx-4 my-4 px-4 py-2 w-1/2 text-white text-lg font-bold bg-black/20 border border-white/50 backdrop-blur-sm rounded-lg shadow-[inset_0_1px_0px_rgba(255,255,255,0.75),0_0_9px_rgba(0,0,0,0.2),0_3px_8px_rgba(0,0,0,0.15)] placeholder:text-white/70 focus:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300 relative before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-br before:from-white/60 before:via-transparent before:to-transparent before:opacity-70 before:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:bg-gradient-to-tl after:from-white/30 after:via-transparent after:to-transparent after:opacity-50 after:pointer-events-none" />
+        </div>
+        <button id="check_reward"
+          class="inline-flex items-center justify-center border align-middle select-none font-sans text-center px-4 py-2 text-white text-sm font-medium rounded-lg bg-white/2.5  border-white/50 backdrop-blur-sm shadow-[inset_0_1px_0px_rgba(255,255,255,0.75),0_0_9px_rgba(0,0,0,0.2),0_3px_8px_rgba(0,0,0,0.15)] hover:bg-white/30 transition-all duration-300 before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-br before:from-white/60 before:via-transparent before:to-transparent before:opacity-70 before:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:bg-gradient-to-tl after:from-white/30 after:via-transparent after:to-transparent after:opacity-50 after:pointer-events-none  antialiased"
+          type="button">ตรวจรางวัล</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./src/main.js" type="module"></script>
+
+</html>
